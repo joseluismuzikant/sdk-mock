@@ -1,0 +1,156 @@
+{
+  "entryPoint": [
+    {
+      "name": "GET_NFC_STATUS",
+      "parameters": {
+        "outbound": [
+          {
+            "name": "nfc_supported",
+            "value": "true"
+          },
+          {
+            "name": "response_code",
+            "value": "000"
+          }
+        ]
+      }
+    },
+    {
+      "name": "REGISTER_TOKEN",
+      "parameters": {
+        "inbound": [
+          {
+            "name": "pan_reference_number"
+          }
+        ],
+        "outbound": [
+          {
+            "name": "token_key",
+            "value": "10c31aa6-2cab-48d5-8db9-30c9ddaac578"
+          },
+          {
+            "name": "response_code",
+            "value": "100"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BASE_REGISTER_TOKEN",
+      "parameters": {
+        "inbound": [
+          {
+            "name": "primary_account_number"
+          },
+          {
+            "name": "expiration_date"
+          },
+          {
+            "name": "security_code"
+          }
+        ],
+        "outbound": [
+          {
+            "name": "token_key",
+            "value": "11c31aa6-2cab-48d5-8db9-30c9ddaac579"
+          },
+          {
+            "name": "response_code",
+            "value": "200"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SELECT_TOKEN",
+      "parameters": {
+        "inbound": [
+          {
+            "name": "token_key"
+          }
+        ],
+        "outbound": [
+          {
+            "name": "response_code",
+            "value": "300"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PAY_WITH_NFC",
+      "parameters": {
+        "outbound": [
+          {
+            "name": "response_code",
+            "value": "400"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UNREGISTER_TOKEN",
+      "parameters": {
+        "inbound": [
+          {
+            "name": "token_key"
+          }
+        ],
+        "outbound": [
+          {
+            "name": "response_code",
+            "value": "500"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUSPEND_TOKEN",
+      "parameters": {
+        "inbound": [
+          {
+            "name": "token_key"
+          }
+        ],
+        "outbound": [
+          {
+            "name": "response_code",
+            "value": "600"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ACTIVATE_TOKEN",
+      "parameters": {
+        "inbound": [
+          {
+            "name": "token_key"
+          }
+        ],
+        "outbound": [
+          {
+            "name": "response_code",
+            "value": "700"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ANIMATE_PAYMENT",
+      "parameters": {
+        "inbound": [
+          {
+            "name": "brand_name"
+          }
+        ],
+        "outbound": [
+          {
+            "name": "response_code",
+            "value": "800"
+          }
+        ]
+      }
+    }
+  ]
+}

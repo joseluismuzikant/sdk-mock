@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Xpress plug demo</string>
+    <string name="welcome_to_the_xpress_plug_demo">Welcome to the Xpress Plug Demo!</string>
+    <string name="init_xpresspulg">Init Xpress Plug</string>
+    <string name="start_xpresspulg">SART XPRESS PLUG</string>
+    <string name="execute_action_btn">SEND MESSAGE TO SDK</string>
+</resources>

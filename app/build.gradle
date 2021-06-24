@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.example.veritransdkmockui"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+
+    implementation project(":sdk")
+
+    //Use this for distribution, ( previuos regenerate the aar):
+    // implementation(name:'sdk-release', ext:'aar')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+}
